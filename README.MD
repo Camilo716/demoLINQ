@@ -1,1 +1,1 @@
-A simple lab for practice LINQ 
+A simple lab for practice data management with LINQ 
