@@ -1,6 +1,6 @@
 namespace demoLINQ.Models;
 
-class BookModel
+public class BookModel
 {
     public string Tittle{get;set;}
     public int PageCount{get;set;}

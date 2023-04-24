@@ -1,6 +1,6 @@
 [
     {
-      "title": "Unlocking Android",
+      "tittle": "Unlocking Android",
       "pageCount": 416,
       "publishedDate": "2009-04-01",
       "thumbnailUrl": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ableson.jpg",
@@ -17,7 +17,7 @@
       ]
     },
     {
-      "title": "Android in Action, Second Edition",
+      "tittle": "Android in Action, Second Edition",
       "pageCount": 592,
       "publishedDate": "2011-01-14",
       "thumbnailUrl": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ableson2.jpg",
@@ -33,7 +33,7 @@
       ]
     },
     {
-      "title": "Specification by Example",
+      "tittle": "Specification by Example",
       "pageCount": 0,
       "publishedDate": "2011-06-03",
       "thumbnailUrl": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/adzic.jpg",
@@ -46,7 +46,7 @@
       ]
     },
     {
-      "title": "Collective Intelligence in Action",
+      "tittle": "Collective Intelligence in Action",
       "pageCount": 425,
       "publishedDate": "2008-10-01",
       "thumbnailUrl": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/alag.jpg",
@@ -60,7 +60,7 @@
       ]
     },
     {
-      "title": "Griffon in Action",
+      "tittle": "Griffon in Action",
       "pageCount": 375,
       "publishedDate": "2012-06-04",
       "thumbnailUrl": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/almiray.jpg",
@@ -78,7 +78,7 @@
       ]
     },
     {
-      "title": "OSGi in Depth",
+      "tittle": "OSGi in Depth",
       "pageCount": 325,
       "publishedDate": "2011-12-12",
       "thumbnailUrl": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/alves.jpg",
@@ -93,7 +93,7 @@
       ]
     },
     {
-      "title": "Flexible Rails",
+      "tittle": "Flexible Rails",
       "pageCount": 592,
       "publishedDate": "2008-01-01",
       "thumbnailUrl": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/armstrong.jpg",
@@ -108,7 +108,7 @@
       ]
     },
     {
-      "title": "Hello! Flex 4",
+      "tittle": "Hello! Flex 4",
       "pageCount": 258,
       "publishedDate": "2009-11-01",
       "thumbnailUrl": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/armstrong3.jpg",
@@ -123,7 +123,7 @@
       ]
     },
     {
-      "title": "Coffeehouse",
+      "tittle": "Coffeehouse",
       "pageCount": 316,
       "publishedDate": "1997-07-01",
       "thumbnailUrl": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/asher.jpg",
@@ -139,7 +139,7 @@
       ]
     },
     {
-      "title": "Team Foundation Server 2008 in Action",
+      "tittle": "Team Foundation Server 2008 in Action",
       "pageCount": 344,
       "publishedDate": "2008-12-01",
       "thumbnailUrl": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/azher.jpg",
@@ -153,7 +153,7 @@
       ]
     },
     {
-      "title": "Brownfield Application Development in .NET",
+      "tittle": "Brownfield Application Development in .NET",
       "pageCount": 550,
       "publishedDate": "2010-04-16",
       "thumbnailUrl": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/baley.jpg",
@@ -169,7 +169,7 @@
       ]
     },
     {
-      "title": "MongoDB in Action",
+      "tittle": "MongoDB in Action",
       "pageCount": 0,
       "publishedDate": "2011-12-12",
       "thumbnailUrl": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/banker.jpg",
@@ -184,7 +184,7 @@
       ]
     },
     {
-      "title": "Distributed Application Development with PowerBuilder 6.0",
+      "tittle": "Distributed Application Development with PowerBuilder 6.0",
       "pageCount": 504,
       "publishedDate": "1998-06-01",
       "longDescription": "Distributed Application Development with PowerBuilder 6.0 is a vital source for the PowerBuilder programmer; it provides the sort of detailed coverage of Distributed PowerBuilder that you can find nowwhere else.    The book opens with a discussion of distributed computing in general, as well as its design principles and technologies. Then Distributed PowerBuilder is examined in detail. By building a simple application step by step, the author discusses all of the concepts and components needed for building a PowerBuilder application and shows how to make the application available over a network.    Finally, the author explores how PowerBuilder can be used in distributed solutions both with and without using DPB.    Distributed Application Development with PowerBuilder 6.0 is for any PowerBuilder developer looking for information on distributed computing options with the PowerBuilder environment. IS managers, system architects, and developers using many different technologies can learn how PowerBuilder can be used as all or part of the solution for building distributed applications.    The main topic of this book is Distributed PowerBuilder (DPB). It covers the basics of building a DPB application and walks through each new feature with examples including the Shared object, DataWindow synchronization, Server Push and Web.PB. It also explains distributed computing technologies and design principles so that your application can be built to handle the stresses of a distributed environment.  ",
@@ -197,7 +197,7 @@
       ]
     },
     {
-      "title": "XML Parsing with Digester",
+      "tittle": "XML Parsing with Digester",
       "pageCount": 0,
       "publishedDate": "2005-03-01",
       "thumbnailUrl": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/goyal4.jpg",
@@ -210,7 +210,7 @@
       ]
     },
     {
-      "title": "JXPath and Betwixt: Working with XML",
+      "tittle": "JXPath and Betwixt: Working with XML",
       "pageCount": 0,
       "publishedDate": "2005-03-01",
       "thumbnailUrl": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/goyal5.jpg",
@@ -223,7 +223,7 @@
       ]
     },
     {
-      "title": "Validating Data with Validator",
+      "tittle": "Validating Data with Validator",
       "pageCount": 0,
       "publishedDate": "2005-03-01",
       "thumbnailUrl": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/goyal6.jpg",
@@ -236,7 +236,7 @@
       ]
     },
     {
-      "title": "Enhancing Java Core Libraries with Collections",
+      "tittle": "Enhancing Java Core Libraries with Collections",
       "pageCount": 0,
       "publishedDate": "2005-03-01",
       "thumbnailUrl": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/goyal7.jpg",
@@ -249,7 +249,7 @@
       ]
     },
     {
-      "title": "Enhancing Java Core Libraries with BeanUtils and Lang",
+      "tittle": "Enhancing Java Core Libraries with BeanUtils and Lang",
       "pageCount": 450,
       "publishedDate": "2005-03-01",
       "thumbnailUrl": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/goyal8.jpg",
@@ -262,7 +262,7 @@
       ]
     },
     {
-      "title": "Pool and DBCP: Creating and Using Object Pools",
+      "tittle": "Pool and DBCP: Creating and Using Object Pools",
       "pageCount": 521,
       "publishedDate": "2005-03-01",
       "thumbnailUrl": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/goyal9.jpg",
@@ -275,7 +275,7 @@
       ]
     },
     {
-      "title": "Python and Tkinter Programming",
+      "tittle": "Python and Tkinter Programming",
       "pageCount": 688,
       "publishedDate": "2000-01-01",
       "thumbnailUrl": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/grayson.jpg",
@@ -289,7 +289,7 @@
       ]
     },
     {
-      "title": "Microsoft.NET for Programmers",
+      "tittle": "Microsoft.NET for Programmers",
       "pageCount": 386,
       "publishedDate": "2002-12-01",
       "thumbnailUrl": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/grimes.jpg",
@@ -303,7 +303,7 @@
       ]
     },
     {
-      "title": "Grails in Action",
+      "tittle": "Grails in Action",
       "pageCount": 520,
       "publishedDate": "2009-05-01",
       "thumbnailUrl": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/gsmith.jpg",
@@ -319,7 +319,7 @@
       ]
     },
     {
-      "title": "Up to Speed with Swing, Second Edition",
+      "tittle": "Up to Speed with Swing, Second Edition",
       "pageCount": 560,
       "publishedDate": "1999-10-01",
       "thumbnailUrl": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/gutz2.jpg",
@@ -334,7 +334,7 @@
       ]
     },
     {
-      "title": "OSGi in Action",
+      "tittle": "OSGi in Action",
       "pageCount": 576,
       "publishedDate": "2011-04-06",
       "thumbnailUrl": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/hall.jpg",
@@ -353,7 +353,7 @@
       ]
     },
     {
-      "title": "GWT in Action",
+      "tittle": "GWT in Action",
       "pageCount": 632,
       "publishedDate": "2007-06-01",
       "thumbnailUrl": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/hanson.jpg",
@@ -369,7 +369,7 @@
       ]
     },
     {
-      "title": "The Quick Python Book",
+      "tittle": "The Quick Python Book",
       "pageCount": 444,
       "publishedDate": "1999-10-01",
       "thumbnailUrl": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/harms.jpg",
@@ -384,7 +384,7 @@
       ]
     },
     {
-      "title": "SharePoint 2010 Site Owner's Manual",
+      "tittle": "SharePoint 2010 Site Owner's Manual",
       "pageCount": 300,
       "publishedDate": "2012-02-13",
       "thumbnailUrl": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/harryman.jpg",
@@ -399,7 +399,7 @@
       ]
     },
     {
-      "title": "JavaScript: The Definitive Guide",
+      "tittle": "JavaScript: The Definitive Guide",
       "pageCount": 706,
       "publishedDate": "2020-06-06",
       "thumbnailUrl": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ableson.jpg",
@@ -414,7 +414,7 @@
       ]
     },
     {
-      "title": "C#: The Ultimate Advanced Guide To Master C# Programming",
+      "tittle": "C#: The Ultimate Advanced Guide To Master C# Programming",
       "pageCount": 123,
       "publishedDate": "2022-04-22",
       "thumbnailUrl": "https://m.media-amazon.com/images/I/410pQeehltL.jpg",
