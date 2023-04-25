@@ -1,8 +1,8 @@
-﻿using demoLINQ.Queries;
+﻿using demoLINQ.Querier;
 
-var linqExecutor = new LinqExecutor();
+var linqQuerier = new Querier();
 
-var books = linqExecutor.getAllBooks();
+var books = linqQuerier.getAllBooks();
 
 foreach (var book in books)
 {

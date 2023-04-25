@@ -1,15 +1,25 @@
 using demoLINQ.Models;
 using System.Text.Json;
 
-namespace demoLINQ.Queries;
+namespace demoLINQ.Querier;
 
-public class LinqExecutor
+public class Querier
 {
     private List<BookModel> _books = new List<BookModel>();
 
-    public LinqExecutor()
+    public Querier()
     {
-        using(StreamReader streamReader = new StreamReader("books.json"))
+        ImportDataFromJsonFile("./books.json");
+    }
+
+    public IEnumerable<BookModel> getAllBooks()
+    {
+        return _books;
+    }
+    
+    private void ImportDataFromJsonFile(string fileRoute)
+    {
+        using(StreamReader streamReader = new StreamReader("./books.json"))
         {
             string json = streamReader.ReadToEnd();
             //System.Console.WriteLine(json);
@@ -18,10 +28,5 @@ public class LinqExecutor
 
             _books = JsonSerializer.Deserialize<List<BookModel>>(json, opt);
         }
-    }
-
-    public IEnumerable<BookModel> getAllBooks()
-    {
-        return _books;
     }
 }
