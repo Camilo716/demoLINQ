@@ -8,8 +8,8 @@ public class AnimalDataAccess
     
     public AnimalDataAccess()
     {
-        var animalMock = new AnimalMock();
+        var AnimalStub = new AnimalStub();
 
-        _animals = animalMock.GetAnimals().ToList();
+        _animals = AnimalStub.GetAnimals().ToList();
     }
 }

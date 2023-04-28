@@ -1,19 +1,12 @@
 ﻿using demoLINQ.Data;
-using demoLINQ.Models;
+using demoLINQ.Views;
 
-var linqQuerier = new BookDataAccess();
+var bookDataAccess = new BookDataAccess();
+var AllBooks = bookDataAccess.GetAllBooks();
+var BooksAfter2000 = bookDataAccess.GetBooksPublishedAfterYear(2000);
+var InActionsMore200Pages = bookDataAccess.GetBooksWithMoreThan200pagesAndContainsInAction();
 
-var AllBooks = linqQuerier.GetAllBooks();
-var BooksAfter2000 = linqQuerier.GetBooksPublishedAfterYear(2000);
-var InActionsMore200Pages = linqQuerier.GetBooksWithMoreThan200pagesAndContainsInAction();
 
-PrintValues(AllBooks);
+var consoleUI = new ConsoleUI();
 
-void PrintValues(IEnumerable<BookModel> booksList)
-{
-    Console.WriteLine("{0,-60} {1, 15} {2, 15}\n", "Tittle", "Pages #", "Published Date");
-    foreach(var item in booksList)
-    {
-        Console.WriteLine("{0,-60} {1, 15} {2, 15}", item.Tittle, item.PageCount, item.PublishedDate.ToShortDateString());
-    }
-}
+consoleUI.PrintBooks(AllBooks);

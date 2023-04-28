@@ -2,11 +2,11 @@ namespace demoLINQ.Mocks;
 using demoLINQ.Models;
 using System.Text.Json;
 
-public class BookMock
+public class BookStub
 {
     private List<BookModel> _books = new List<BookModel>();
 
-    public BookMock()
+    public BookStub()
     {
         ImportDataFromJsonFile("./books.json");
     }

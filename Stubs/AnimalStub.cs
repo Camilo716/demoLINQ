@@ -1,11 +1,11 @@
 using demoLINQ.Models;
 namespace demoLINQ.Mocks;
 
-public class AnimalMock
+public class AnimalStub
 {
     private List<AnimalModel> _animals = new List<AnimalModel>();
 
-    public AnimalMock()
+    public AnimalStub()
     {   
         InitializeAnimalData();
     }

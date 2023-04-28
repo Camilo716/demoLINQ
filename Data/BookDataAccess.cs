@@ -10,10 +10,10 @@ public class BookDataAccess
     
     public BookDataAccess()
     {
-        var BookMock = new BookMock();
-        var AnimalMock = new AnimalMock();
+        var BookStub = new BookStub();
+        var AnimalStub = new AnimalStub();
 
-        _books = BookMock.GetBooks().ToList();
+        _books = BookStub.GetBooks().ToList();
     }
 
     public IEnumerable<BookModel> GetAllBooks()
