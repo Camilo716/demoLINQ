@@ -2,7 +2,7 @@
   
   public class AnimalModel
   {
-    public string Nombre {get;set;}
+    public string Name {get;set;}
     public string Color {get;set;}
   }
 

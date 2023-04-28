@@ -1,19 +1,19 @@
 using demoLINQ.Models;
-using demoLINQ.Stubs;
+using demoLINQ.Mocks;
 
-using System.Text.Json;
+namespace demoLINQ.Data;
 
-namespace demoLINQ.Querier;
-
-public class Querier
+public class BookDataAccess
 {
     private List<BookModel> _books;
+    private List<AnimalModel> _animals;
     
-    public Querier()
+    public BookDataAccess()
     {
-        var booksStub = new BooksStub();
+        var BookMock = new BookMock();
+        var AnimalMock = new AnimalMock();
 
-        _books = booksStub.GetBooks().ToList();
+        _books = BookMock.GetBooks().ToList();
     }
 
     public IEnumerable<BookModel> GetAllBooks()

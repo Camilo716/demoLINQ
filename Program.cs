@@ -1,7 +1,7 @@
-﻿using demoLINQ.Querier;
+﻿using demoLINQ.Data;
 using demoLINQ.Models;
 
-var linqQuerier = new Querier();
+var linqQuerier = new BookDataAccess();
 
 var AllBooks = linqQuerier.GetAllBooks();
 var BooksAfter2000 = linqQuerier.GetBooksPublishedAfterYear(2000);
