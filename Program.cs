@@ -7,7 +7,7 @@ var AllBooks = linqQuerier.GetAllBooks();
 var BooksAfter2000 = linqQuerier.GetBooksPublishedAfterYear(2000);
 var InActionsMore200Pages = linqQuerier.GetBooksWithMoreThan200pagesAndContainsInAction();
 
-PrintValues(InActionsMore200Pages);
+PrintValues(AllBooks);
 
 void PrintValues(IEnumerable<BookModel> booksList)
 {

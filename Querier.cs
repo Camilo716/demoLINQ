@@ -1,15 +1,19 @@
 using demoLINQ.Models;
+using demoLINQ.Stubs;
+
 using System.Text.Json;
 
 namespace demoLINQ.Querier;
 
 public class Querier
 {
-    private List<BookModel> _books = new List<BookModel>();
-
+    private List<BookModel> _books;
+    
     public Querier()
     {
-        ImportDataFromJsonFile("./books.json");
+        var booksStub = new BooksStub();
+
+        _books = booksStub.GetBooks().ToList();
     }
 
     public IEnumerable<BookModel> GetAllBooks()
@@ -25,17 +29,5 @@ public class Querier
     public IEnumerable<BookModel> GetBooksWithMoreThan200pagesAndContainsInAction()
     {
         return _books.Where(b => b.PageCount > 200 && b.Tittle.ToLower().Contains("in action"));
-    }
-
-    private void ImportDataFromJsonFile(string fileRoute)
-    {
-        using(StreamReader streamReader = new StreamReader("./books.json"))
-        {
-            string json = streamReader.ReadToEnd();
-
-            var opt = new JsonSerializerOptions(){PropertyNameCaseInsensitive = true};
-
-            _books = JsonSerializer.Deserialize<List<BookModel>>(json, opt);
-        }
     }
 }
