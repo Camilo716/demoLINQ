@@ -7,6 +7,9 @@ var BooksAfter2000 = bookDataAccess.GetBooksPublishedAfterYear(2000);
 var InActionsMore200Pages = bookDataAccess.GetBooksWithMoreThan200pagesAndContainsInAction();
 
 
-var consoleUI = new ConsoleUI();
+var animalDataAccess = new AnimalDataAccess();
+var GreenAnimalWithStartWithVowel = animalDataAccess.GetGreenAnimalsWhichNameStartWithVocal();
 
-consoleUI.PrintBooks(AllBooks);
+var consoleUI = new ConsoleUI();
+consoleUI.PrintAnimals(GreenAnimalWithStartWithVowel);
+//consoleUI.PrintBooks(AllBooks);
