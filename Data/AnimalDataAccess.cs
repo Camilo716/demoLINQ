@@ -14,14 +14,14 @@ public class AnimalDataAccess
     }
 
 
-    public IEnumerable<AnimalModel> GetGreenAnimalsWhichNameStartWithVocal()
+    public IEnumerable<AnimalModel> GetGreenAnimalsWhichNameStartWithVowel()
     {
-        List<char> vocal = new List<char>(){'a','e','i','o','u'};
+        List<char> vowels = new List<char>(){'a','e','i','o','u'};
 
         Func<AnimalModel, bool> filterStartsWithVocal = animals => {
-           for (int i = 0; i < vocal.Count(); i++)
+           for (int i = 0; i < vowels.Count(); i++)
            {
-                if (animals.Name.ToLower().StartsWith(vocal[i]))
+                if (animals.Name.ToLower().StartsWith(vowels[i]))
                 {
                     return true;
                 }
@@ -29,8 +29,6 @@ public class AnimalDataAccess
            return false;
         };
 
-        return _animals.Where(a => a.Color.ToLower() == "verde" && filterStartsWithVocal(a));
-
-        
+        return _animals.Where(a => a.Color.ToLower() == "verde" && filterStartsWithVocal(a));      
     }
 }

@@ -8,7 +8,7 @@ var InActionsMore200Pages = bookDataAccess.GetBooksWithMoreThan200pagesAndContai
 
 
 var animalDataAccess = new AnimalDataAccess();
-var GreenAnimalWithStartWithVowel = animalDataAccess.GetGreenAnimalsWhichNameStartWithVocal();
+var GreenAnimalWithStartWithVowel = animalDataAccess.GetGreenAnimalsWhichNameStartWithVowel();
 
 var consoleUI = new ConsoleUI();
 consoleUI.PrintAnimals(GreenAnimalWithStartWithVowel);
