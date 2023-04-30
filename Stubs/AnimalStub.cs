@@ -1,5 +1,6 @@
 using demoLINQ.Models;
-namespace demoLINQ.Mocks;
+
+namespace demoLINQ.Stubs;
 
 public class AnimalStub
 {

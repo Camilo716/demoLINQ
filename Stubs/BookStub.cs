@@ -1,6 +1,7 @@
-namespace demoLINQ.Mocks;
 using demoLINQ.Models;
 using System.Text.Json;
+
+namespace demoLINQ.Stubs;
 
 public class BookStub
 {

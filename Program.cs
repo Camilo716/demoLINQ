@@ -4,7 +4,7 @@ using demoLINQ.Views;
 var bookDataAccess = new BookDataAccess();
 var AllBooks = bookDataAccess.GetAllBooks();
 var BooksAfter2000 = bookDataAccess.GetBooksPublishedAfterYear(2000);
-var InActionsMore200Pages = bookDataAccess.GetBooksWithMoreThan200pagesAndContainsInAction();
+var InActionsMore200Pages = bookDataAccess.GetBooksByMinimuPagesAndKeyWord(200, "in action");
 var PythonBooks = bookDataAccess.GetBooksByCategory("Python");
 
 
@@ -13,7 +13,6 @@ var GreenAnimalWithStartWithVowel = animalDataAccess.GetGreenAnimalsWhichNameSta
 
 
 var consoleUI = new ConsoleUI();
-
 consoleUI.PrintBooks(PythonBooks);
-Console.WriteLine(bookDataAccess.AnyBookWasPublishedIn2005());
+Console.WriteLine(bookDataAccess.AnyBookWasPublishedInYear(2005));
 //consoleUI.PrintAnimals(GreenAnimalWithStartWithVowel);

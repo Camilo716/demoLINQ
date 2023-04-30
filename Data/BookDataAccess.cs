@@ -1,12 +1,11 @@
 using demoLINQ.Models;
-using demoLINQ.Mocks;
+using demoLINQ.Stubs;
 
 namespace demoLINQ.Data;
 
 public class BookDataAccess
 {
     private List<BookModel> _books;
-    private List<AnimalModel> _animals;
     
     public BookDataAccess()
     {
@@ -26,9 +25,9 @@ public class BookDataAccess
         return _books.Where(b => b.PublishedDate.Year >= year);
     }
     
-    public IEnumerable<BookModel> GetBooksWithMoreThan200pagesAndContainsInAction()
+    public IEnumerable<BookModel> GetBooksByMinimuPagesAndKeyWord(int minimumPages, string KeyWord)
     {
-        return _books.Where(b => b.PageCount > 200 && b.Tittle.ToLower().Contains("in action"));
+        return _books.Where(b => b.PageCount > minimumPages && b.Tittle.ToLower().Contains(KeyWord.ToLower()));
     }
 
     public bool AllBooksHasState()
@@ -36,16 +35,14 @@ public class BookDataAccess
         return _books.All(b => !String.IsNullOrEmpty(b.Status));
     }
 
-    public bool AnyBookWasPublishedIn2005()
+    public bool AnyBookWasPublishedInYear(int year)
     {
-        return _books.Any(b => b.PublishedDate.Year == 2005);
+        return _books.Any(b => b.PublishedDate.Year == year);
     }
 
     public IEnumerable<BookModel> GetBooksByCategory(string categoryBook)
     {
-        return _books.Where(b => b.Categories.Contains(categoryBook));
+        return _books.Where(b => b.Categories.Contains(categoryBook)).OrderBy(b => b.Tittle); 
     }
-    
-
 
 }
