@@ -34,6 +34,6 @@ public class AnimalDataAccess
 
     public IEnumerable<AnimalModel> GetAnimalsOrderedByName()
     {
-        return _animals.OrderBy(b => b.Color);
+        return _animals.OrderBy(b => b.Name);
     }
 }
