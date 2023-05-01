@@ -25,9 +25,14 @@ public class BookDataAccess
         return _books.Where(b => b.PublishedDate.Year >= year);
     }
     
-    public IEnumerable<BookModel> GetBooksByMinimuPagesAndKeyWord(int minimumPages, string KeyWord)
+    public IEnumerable<BookModel> GetBooksByMinimuPages(int minimumPages, string KeyWord)
     {
         return _books.Where(b => b.PageCount > minimumPages && b.Tittle.ToLower().Contains(KeyWord.ToLower()));
+    }
+    
+    public IEnumerable<BookModel> GetBooksByMinimumPages(int minimumPages)
+    {
+        return _books.Where(b => b.PageCount > minimumPages).OrderByDescending(b => b.PageCount);
     }
 
     public bool AllBooksHasState()
@@ -43,6 +48,5 @@ public class BookDataAccess
     public IEnumerable<BookModel> GetBooksByCategory(string categoryBook)
     {
         return _books.Where(b => b.Categories.Contains(categoryBook)).OrderBy(b => b.Tittle); 
-    }
-
+    }   
 }

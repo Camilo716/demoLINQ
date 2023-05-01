@@ -5,10 +5,11 @@ namespace demoLINQ.Stubs;
 
 public class BookStub
 {
-    private List<BookModel> _books = new List<BookModel>();
+    private List<BookModel> _books;
 
     public BookStub()
     {
+        _books = new List<BookModel>();
         ImportDataFromJsonFile("./books.json");
     }
 
@@ -25,7 +26,8 @@ public class BookStub
 
             var opt = new JsonSerializerOptions(){PropertyNameCaseInsensitive = true};
 
-            _books = JsonSerializer.Deserialize<List<BookModel>>(json, opt);
+            _books = JsonSerializer.Deserialize<List<BookModel>>(json, opt) ?? new List<BookModel>();
+;
         }
     }
 }
