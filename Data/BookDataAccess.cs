@@ -47,6 +47,22 @@ public class BookDataAccess
 
     public IEnumerable<BookModel> GetBooksByCategory(string categoryBook)
     {
-        return _books.Where(b => b.Categories.Contains(categoryBook)).OrderBy(b => b.Tittle); 
+        var booksFilteredByCategory = _books.Where(b => b.Categories.Contains(categoryBook));
+
+        var booksOrderedByTittle = booksFilteredByCategory.OrderByDescending(b => b.Tittle);
+        
+        return booksOrderedByTittle;
     }   
+
+    public IEnumerable<BookModel> GetMostRecentlyBooks(int numberOfBooksToGet, string categoryBook)
+    {
+        var booksFilteredByCategory = _books.Where(b => b.Categories.Contains(categoryBook));
+
+        var booksOrderedByDate = booksFilteredByCategory.OrderBy(b => b.PublishedDate);
+
+        var mostRecentlyBooks = booksOrderedByDate.Take(numberOfBooksToGet);
+
+        return mostRecentlyBooks;
+    }
+
 }

@@ -7,11 +7,12 @@ var BooksAfter2000 = bookDataAccess.GetBooksPublishedAfterYear(2000);
 var InActionsMore200Pages = bookDataAccess.GetBooksByMinimuPages(200, "in action");
 var PythonBooks = bookDataAccess.GetBooksByCategory("Python");
 var BooksWithMore450pages = bookDataAccess.GetBooksByMinimumPages(450);
+var MostRecentlyJavaBooks = bookDataAccess.GetMostRecentlyBooks(7, "Java");
 
 var animalDataAccess = new AnimalDataAccess();
 var GreenAnimalWithStartWithVowel = animalDataAccess.GetGreenAnimalsWhichNameStartWithVowel();
 var AllAnimalsOrderedByName = animalDataAccess.GetAnimalsOrderedByName();
 
 var consoleUI = new ConsoleUI();
-//consoleUI.PrintBooks(BooksWithMore450pages);
-consoleUI.PrintAnimals(AllAnimalsOrderedByName);
+consoleUI.PrintBooks(MostRecentlyJavaBooks);
+// consoleUI.PrintAnimals(AllAnimalsOrderedByName);
