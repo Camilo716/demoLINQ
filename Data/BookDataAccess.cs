@@ -25,7 +25,7 @@ public class BookDataAccess
         return _books.Where(b => b.PublishedDate.Year >= year);
     }
     
-    public IEnumerable<BookModel> GetBooksByMinimuPages(int minimumPages, string KeyWord)
+    public IEnumerable<BookModel> GetBooksByMinimumOfPages(int minimumPages, string KeyWord)
     {
         return _books.Where(b => b.PageCount > minimumPages && b.Tittle.ToLower().Contains(KeyWord.ToLower()));
     }
@@ -64,5 +64,15 @@ public class BookDataAccess
 
         return mostRecentlyBooks;
     }
+
+    public IEnumerable<BookModel> Get3And4BooksByMinimumOfPages(int numberOfPages)
+    {
+        var first4Books = _books.Where(b => b.PageCount >= numberOfPages).Take(4);
+        
+        var books3And4 = first4Books.Skip(2);
+
+        return books3And4;
+    }
+
 
 }

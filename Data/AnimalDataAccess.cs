@@ -13,7 +13,6 @@ public class AnimalDataAccess
         _animals = AnimalStub.GetAnimals().ToList();
     }
 
-
     public IEnumerable<AnimalModel> GetGreenAnimalsWhichNameStartWithVowel()
     {
         List<char> vowels = new List<char>(){'a','e','i','o','u'};
