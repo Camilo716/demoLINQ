@@ -10,11 +10,10 @@ var BooksWithMore450pages = bookDataAccess.GetBooksByMinimumPages(450);
 var MostRecentlyJavaBooks = bookDataAccess.GetMostRecentlyBooks(7, "Java");
 var Books3and4WithMore400Pages = bookDataAccess.Get3And4BooksByMinimumOfPages(400);
 
-
 var animalDataAccess = new AnimalDataAccess();
 var GreenAnimalWithStartWithVowel = animalDataAccess.GetGreenAnimalsWhichNameStartWithVowel();
 var AllAnimalsOrderedByName = animalDataAccess.GetAnimalsOrderedByName();
 
 var consoleUI = new ConsoleUI();
-consoleUI.PrintBooks(Books3and4WithMore400Pages);
+consoleUI.PrintBooks(PythonBooks);
 // consoleUI.PrintAnimals(AllAnimalsOrderedByName);

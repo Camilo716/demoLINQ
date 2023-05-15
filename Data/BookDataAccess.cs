@@ -65,14 +65,24 @@ public class BookDataAccess
         return mostRecentlyBooks;
     }
 
-    public IEnumerable<BookModel> Get3And4BooksByMinimumOfPages(int numberOfPages)
+    public IEnumerable<BookModel> Get3And4BooksByMinimumOfPages(int minimumPages)
     {
-        var first4Books = _books.Where(b => b.PageCount >= numberOfPages).Take(4);
+        var first4Books = _books.Where(b => b.PageCount >= minimumPages).Take(4);
         
         var books3And4 = first4Books.Skip(2);
 
         return books3And4;
     }
 
+    public IEnumerable<object> GetTittleAndPageCount()
+    {
+        var first3Books = _books.Take(3);
 
+        var tittleAndPageCount = first3Books.Select(p => new {p.Tittle , p.PageCount});
+
+        return tittleAndPageCount;
+    }
+
+
+    // Operadores de Agregación
 }
