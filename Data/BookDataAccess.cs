@@ -83,6 +83,9 @@ public class BookDataAccess
         return tittleAndPageCount;
     }
 
-
     // Operadores de Agregación
+    public long GetNumberOfBooksByPagesInRange(int minRange, int maxRange)
+    {
+        return _books.LongCount(p => p.PageCount>=minRange && p.PageCount<=maxRange);
+    }
 }
