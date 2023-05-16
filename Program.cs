@@ -9,13 +9,17 @@ var PythonBooks = bookDataAccess.GetBooksByCategory("Python");
 var BooksWithMore450pages = bookDataAccess.GetBooksByMinimumPages(450);
 var MostRecentlyJavaBooks = bookDataAccess.GetMostRecentlyBooks(7, "Java");
 var Books3and4WithMore400Pages = bookDataAccess.Get3And4BooksByMinimumOfPages(400);
-int BooksBetween100And200Pages = bookDataAccess.GetNumberOfBooksByPagesInRange(100,200);
+long BooksBetween100And200Pages = bookDataAccess.GetNumberOfBooksByPagesInRange(100,200);
+DateOnly OldestPublishDate = bookDataAccess.GetOldestPublishDate();
+int HighestPageCount = bookDataAccess.GetHighestPageCount();
+var LowePageCountBook = bookDataAccess.GetLowestPageCountBook();
 
 var animalDataAccess = new AnimalDataAccess();
 var GreenAnimalWithStartWithVowel = animalDataAccess.GetGreenAnimalsWhichNameStartWithVowel();
 var AllAnimalsOrderedByName = animalDataAccess.GetAnimalsOrderedByName();
 
+Console.WriteLine(HighestPageCount);
+
 var consoleUI = new ConsoleUI();
-System.Console.WriteLine(BooksBetween100And200Pages);
 // consoleUI.PrintBooks(PythonBooks);
 // consoleUI.PrintAnimals(AllAnimalsOrderedByName);

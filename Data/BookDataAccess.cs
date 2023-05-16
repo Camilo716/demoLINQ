@@ -86,6 +86,28 @@ public class BookDataAccess
     // Operadores de Agregación
     public long GetNumberOfBooksByPagesInRange(int minRange, int maxRange)
     {
-        return _books.LongCount(p => p.PageCount>=minRange && p.PageCount<=maxRange);
+        return _books.LongCount(b => b.PageCount>=minRange && b.PageCount<=maxRange);
+    }
+
+    public DateOnly GetOldestPublishDate()
+    {
+        return  DateOnly.FromDateTime(_books.Min(b => b.PublishedDate));
+    }
+
+    public int GetHighestPageCount()
+    {
+        return _books.Max(b => b.PageCount);
+    }
+
+    public BookModel? GetLowestPageCountBook()
+    {
+        return _books
+            .Where(b => b.PageCount > 0)
+            .MinBy(b => b.PageCount);
+    }
+
+    public BookModel? GetNewestBook()
+    {
+        return _books.MaxBy(b => b.PageCount);
     }
 }
