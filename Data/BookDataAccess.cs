@@ -124,7 +124,7 @@ public class BookDataAccess
                 {
                     tittlesAcumulated += 
                     (
-                        string.IsNullOrEmpty(tittlesAcumulated) ? nextBook.Tittle : $"\n\n{nextBook}"
+                        string.IsNullOrEmpty(tittlesAcumulated) ? nextBook.Tittle : $"\n\n{nextBook.Tittle}"
                     );
 
                     return tittlesAcumulated;
@@ -140,5 +140,7 @@ public class BookDataAccess
 
                 //     return bookTittlesAcumulated;
                 // });
-    }           
+    }         
+    
+      
 }
