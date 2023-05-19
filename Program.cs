@@ -13,12 +13,14 @@ long BooksBetween100And200Pages = bookDataAccess.GetNumberOfBooksByPagesInRange(
 DateOnly OldestPublishDate = bookDataAccess.GetOldestPublishDate();
 int HighestPageCount = bookDataAccess.GetHighestPageCount();
 var LowePageCountBook = bookDataAccess.GetLowestPageCountBook();
+int TotalBooksPages = bookDataAccess.GetTotalBooksPages();
+string booksTittlesAfter2010 = bookDataAccess.GetBooksTittlesAfterYear(2010);
 
+System.Console.WriteLine(booksTittlesAfter2010);
 var animalDataAccess = new AnimalDataAccess();
 var GreenAnimalWithStartWithVowel = animalDataAccess.GetGreenAnimalsWhichNameStartWithVowel();
 var AllAnimalsOrderedByName = animalDataAccess.GetAnimalsOrderedByName();
 
-Console.WriteLine(HighestPageCount);
 
 var consoleUI = new ConsoleUI();
 // consoleUI.PrintBooks(PythonBooks);

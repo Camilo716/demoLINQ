@@ -110,4 +110,35 @@ public class BookDataAccess
     {
         return _books.MaxBy(b => b.PageCount);
     }
+
+    public int GetTotalBooksPages()
+    {
+        return _books.Sum(b => b.PageCount);
+    }
+
+    public string GetBooksTittlesAfterYear(int year)
+    {
+        return _books
+                .Where(b => b.PublishedDate.Year >= year )
+                .Aggregate("", (tittlesAcumulated, nextBook) =>
+                {
+                    tittlesAcumulated += 
+                    (
+                        string.IsNullOrEmpty(tittlesAcumulated) ? nextBook.Tittle : $"\n\n{nextBook}"
+                    );
+
+                    return tittlesAcumulated;
+                });
+
+                // .Aggregate("", (bookTittlesAcumulated, nextBook) => 
+                // {
+                //     if (!string.IsNullOrEmpty(bookTittlesAcumulated))
+                //         bookTittlesAcumulated += "\n\n"+nextBook.Tittle;
+
+                //     else
+                //         bookTittlesAcumulated += nextBook.Tittle;
+
+                //     return bookTittlesAcumulated;
+                // });
+    }           
 }
