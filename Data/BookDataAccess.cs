@@ -141,4 +141,9 @@ public class BookDataAccess
                 //     return bookTittlesAcumulated;
                 // });
     }         
+
+    public double GetTittlesLengthAverage()
+    {
+        return _books.Average(b => b.Tittle.Length);
+    }
 }

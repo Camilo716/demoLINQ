@@ -15,8 +15,9 @@ int HighestPageCount = bookDataAccess.GetHighestPageCount();
 var LowePageCountBook = bookDataAccess.GetLowestPageCountBook();
 int TotalBooksPages = bookDataAccess.GetTotalBooksPages();
 string booksTittlesAfter2010 = bookDataAccess.GetBooksTittlesAfterYear(2010);
+double TittlesLengthAverage = bookDataAccess.GetTittlesLengthAverage();
 
-System.Console.WriteLine(booksTittlesAfter2010);
+System.Console.WriteLine(TittlesLengthAverage);
 
 var animalDataAccess = new AnimalDataAccess();
 var GreenAnimalWithStartWithVowel = animalDataAccess.GetGreenAnimalsWhichNameStartWithVowel();
