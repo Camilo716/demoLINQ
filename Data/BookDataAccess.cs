@@ -146,4 +146,15 @@ public class BookDataAccess
     {
         return _books.Average(b => b.Tittle.Length);
     }
+
+    // Agrupamiento de datos
+
+    public IEnumerable<IGrouping<int,BookModel>> GetBooksGroupedByYear(int minimumPublishedDate)
+    {
+        return _books
+            .Where(b => b.PublishedDate.Year > minimumPublishedDate)
+            .OrderByDescending(b => b.PublishedDate.Year)
+            .GroupBy(b =>  b.PublishedDate.Year);
+
+    }
 }

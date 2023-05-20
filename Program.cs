@@ -16,8 +16,8 @@ var LowePageCountBook = bookDataAccess.GetLowestPageCountBook();
 int TotalBooksPages = bookDataAccess.GetTotalBooksPages();
 string booksTittlesAfter2010 = bookDataAccess.GetBooksTittlesAfterYear(2010);
 double TittlesLengthAverage = bookDataAccess.GetTittlesLengthAverage();
+var BooksGroupedByYear = bookDataAccess.GetBooksGroupedByYear(2000); 
 
-System.Console.WriteLine(TittlesLengthAverage);
 
 var animalDataAccess = new AnimalDataAccess();
 var GreenAnimalWithStartWithVowel = animalDataAccess.GetGreenAnimalsWhichNameStartWithVowel();
@@ -25,5 +25,6 @@ var AllAnimalsOrderedByName = animalDataAccess.GetAnimalsOrderedByName();
 
 
 var consoleUI = new ConsoleUI();
+consoleUI.PrintBooksIGroupingInt(BooksGroupedByYear);
 // consoleUI.PrintBooks(PythonBooks);
 // consoleUI.PrintAnimals(AllAnimalsOrderedByName);
