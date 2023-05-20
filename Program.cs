@@ -22,9 +22,10 @@ var BooksGroupedByYear = bookDataAccess.GetBooksGroupedByYear(2000);
 var animalDataAccess = new AnimalDataAccess();
 var GreenAnimalWithStartWithVowel = animalDataAccess.GetGreenAnimalsWhichNameStartWithVowel();
 var AllAnimalsOrderedByName = animalDataAccess.GetAnimalsOrderedByName();
-
+var AnimalsGroupedByColor = animalDataAccess.GetAnimalsGroupedByColor();
 
 var consoleUI = new ConsoleUI();
-consoleUI.PrintBooksIGroupingInt(BooksGroupedByYear);
+// consoleUI.PrintBooksIGroupingInt(BooksGroupedByYear);
+consoleUI.PrintAnimalsIGroupingString(AnimalsGroupedByColor);
 // consoleUI.PrintBooks(PythonBooks);
 // consoleUI.PrintAnimals(AllAnimalsOrderedByName);

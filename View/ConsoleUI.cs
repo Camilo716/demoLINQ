@@ -6,22 +6,49 @@ public class ConsoleUI
     public void PrintBooks(IEnumerable<BookModel> booksList)
     {
         Console.WriteLine("{0,-60} {1, 15} {2, 15}\n", "Tittle", "Pages #", "Published Date");
-        foreach(var item in booksList)
+        foreach(var book in booksList)
         {
-            Console.WriteLine("{0,-60} {1, 15} {2, 15}", item.Tittle, item.PageCount, item.PublishedDate.ToShortDateString());
+            Console.WriteLine("{0,-60} {1, 15} {2, 15}", book.Tittle, book.PageCount, book.PublishedDate.ToShortDateString());
         }
     }
 
-    public void PrintBooksIGroupingInt(IEnumerable<IGrouping<int,BookModel>> ListadeLibros)
+    public void PrintBooksIGroupingInt(IEnumerable<IGrouping<int,BookModel>> booksList)
     {
-        foreach(var grupo in ListadeLibros)
-        {
-            Console.WriteLine("");
-            Console.WriteLine($"Grupo: { grupo.Key }");
-            Console.WriteLine("{0,-60} {1, 15} {2, 15}\n", "Titulo", "N. Paginas", "Fecha publicacion");
-            foreach(var item in grupo)
+        foreach(var group in booksList)
+        {            
+            Console.WriteLine("{0,-100}\n", GetHorizontalDivider(100));
+            Console.WriteLine($"Grupo: {group.Key}");
+            Console.WriteLine
+            (
+                "{0,-60} {1, 15}  {2, 15}\n",
+                "Titulos", "N. Paginas", "Fecha publicacion"
+            );
+
+            foreach(var book in group)
             {
-                Console.WriteLine("{0,-60} {1, 15} {2, 15}",item.Tittle,item.PageCount,item.PublishedDate.Date.ToShortDateString()); 
+                Console.WriteLine
+                (
+                    "{0,-60} {1, 15} {2, 15}",
+                    book.Tittle,book.PageCount,book.PublishedDate.Date.ToShortDateString()
+                ); 
+            }
+        }
+    }
+
+    public void PrintAnimalsIGroupingString(IEnumerable<IGrouping<string, AnimalModel>> animalsList)
+    {
+        foreach (var group in animalsList)
+        {
+            Console.WriteLine("{0,-100}\n", GetHorizontalDivider(100));
+            Console.WriteLine($"GRUPO: COLOR {group.Key.ToUpper()}\n");
+
+            foreach (var animal in group)
+            {
+                System.Console.WriteLine
+                (
+                    "{0, -100}",
+                    animal.Name
+                );
             }
         }
     }
@@ -34,5 +61,17 @@ public class ConsoleUI
         {
             Console.WriteLine("{0,-30} {1, 15}", animal.Name, animal.Color);
         }
+    }
+
+    private string GetHorizontalDivider(int horizontalLenght)
+    {
+        string divider = "";
+
+        for (int i = 0; i < horizontalLenght; i++)
+        {
+            divider += "-";
+        }
+        
+        return divider;
     }
 }

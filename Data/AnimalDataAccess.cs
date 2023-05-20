@@ -31,6 +31,11 @@ public class AnimalDataAccess
         return _animals.Where(a => a.Color.ToLower() == "verde" && filterStartsWithVocal(a));      
     }
 
+    public IEnumerable<IGrouping<string, AnimalModel>> GetAnimalsGroupedByColor()
+    {
+        return _animals.GroupBy(a => a.Color);
+    }
+
     public IEnumerable<AnimalModel> GetAnimalsOrderedByName()
     {
         return _animals.OrderBy(b => b.Name);
