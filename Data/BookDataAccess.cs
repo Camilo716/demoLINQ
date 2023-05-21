@@ -157,4 +157,9 @@ public class BookDataAccess
             .GroupBy(b =>  b.PublishedDate.Year);
 
     }
+
+    public ILookup<char, BookModel> GetBooksDictionaryByInitialLetter()
+    {
+        return _books.ToLookup(b => b.Tittle[0]);
+    }
 }

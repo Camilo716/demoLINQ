@@ -63,6 +63,15 @@ public class ConsoleUI
         }
     }
 
+    public void PrintBooksILookupChar(ILookup<char, BookModel> booksList, char letter)
+    {
+        Console.WriteLine("{0,-60} {1, 15} {2, 15}\n", "Titulo", "N. Paginas", "Fecha publicacion");
+        foreach(var item in booksList[letter])
+        {
+                Console.WriteLine("{0,-60} {1, 15} {2, 15}",item.Tittle,item.PageCount,item.PublishedDate.Date.ToShortDateString()); 
+        }
+    }
+
     private string GetHorizontalDivider(int horizontalLenght)
     {
         string divider = "";
